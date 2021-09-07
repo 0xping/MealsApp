@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap");
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: #eff0f2;
+}
+
+.container {
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    padding: 0;
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.header {
+  background-color: #f28ea6;
+  color: #282932;
+}
+
+.header nav {
+  padding: 10px 0;
+  background: #fff;
+}
+
+.header nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav .logo {
+  color: #ff6287;
+  font-family: "Courgette", cursive;
+  font-size: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+}
+
+.header nav span {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.header .head .container {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.header .head .container h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+}
+
+.header .head .container p {
+  margin: 8px auto 30px auto;
+  font-size: 15px;
+  max-width: 400px;
+}
+
+.header .head .container form {
+  margin: auto;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  max-width: 550px;
+  min-width: 300px;
+}
+
+.header .head .container form input {
+  font-family: "Poppins";
+  padding: 20px 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.header .head .container form button {
+  font-family: "Poppins";
+  padding: 20px;
+  border: none;
+  outline: none;
+  background: #282932;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header .head .container form button:hover {
+  -webkit-transition: background ease-in-out 0.2s;
+  -o-transition: background ease-in-out 0.2s;
+  transition: background ease-in-out 0.2s;
+  background: #4a4a52;
+}
+
+@media screen and (min-width: 576px) {
+  .header .head .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 576px) and (min-width: 992px) {
+  .header .head .container {
+    background: url("../images/food-illustration.jpg") 110%/550px no-repeat;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .header .head .container h1 {
+    font-size: 3.5rem;
+  }
+  .header .head .container p {
+    margin: 8px 0 30px 0;
+  }
+  .header .head .container form {
+    margin: 0;
+  }
+}
+
+.result {
+  display: none;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.result .container .title {
+  font-size: 2.2rem;
+  font-family: "Roboto Slab", serif;
+  color: #282932;
+  margin-bottom: 20px;
+}
+
+.result .meals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.result .meals a {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #fff;
+  max-width: 360px;
+  margin: 20px 8px;
+  text-decoration: none;
+  color: #282932;
+  -webkit-transition: -webkit-box-shadow ease 0.5s;
+  transition: -webkit-box-shadow ease 0.5s;
+  -o-transition: box-shadow ease 0.5s;
+  transition: box-shadow ease 0.5s;
+  transition: box-shadow ease 0.5s, -webkit-box-shadow ease 0.5s;
+}
+
+.result .meals a:hover {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.result .meals a img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.result .meals a .description {
+  padding: 10px 20px;
+}
+
+.result .meals a .description h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.randomMeal {
+  background: #f28ea6;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.randomMeal:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.randomMeal .container .title {
+  font-size: 2.2rem;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 20px;
+}
+
+.randomMeal .container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.randomMeal .container .info h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.randomMeal .container .info ul {
+  color: #282932;
+  list-style: none;
+  margin: 30px 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.randomMeal .container .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  padding: 8px;
+  margin-bottom: 2px;
+}
+
+.randomMeal .container .info img {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.randomMeal .container .howTo h1 {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.randomMeal .container .howTo iframe {
+  margin: 40px auto;
+  float: none;
+  width: 100%;
+  max-width: 600px;
+  max-height: 337.5px;
+  aspect-ratio: 16/9;
+}
+
+@media screen and (min-width: 576px) {
+  .randomMeal .container .howTo iframe {
+    float: right;
+    margin: 40px;
+    margin-right: 0;
+  }
+}
+
+.randomMeal .container .howTo p {
+  padding-top: 50px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 992px) {
+  .randomMeal .container .howTo p {
+    text-align: left;
+  }
+}
+
+footer {
+  padding: 15px 0;
+}
+
+footer div {
+  font-size: 17px;
+  padding: 10px;
+  text-align: center;
+}
+
+.block {
+  display: block;
+}

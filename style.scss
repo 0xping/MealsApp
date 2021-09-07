@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: #eff0f2;
+}
+
+$breakpoint: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+@mixin mq($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+.container {
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+  @include mq(map-get($breakpoint, sm)) {
+    padding: 0;
+    max-width: 540px;
+  }
+  @include mq(map-get($breakpoint, md)) {
+    max-width: 720px;
+  }
+  @include mq(map-get($breakpoint, lg)) {
+    max-width: 960px;
+  }
+  @include mq(map-get($breakpoint, xl)) {
+    max-width: 1140px;
+  }
+  @include mq(map-get($breakpoint, xxl)) {
+    max-width: 1320px;
+  }
+}
+
+.header {
+  background-color: #f28ea6;
+  color: #282932;
+  nav {
+    padding: 10px 0;
+    background: #fff;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #ff6287;
+      font-family: "Courgette", cursive;
+      font-size: 2rem;
+      width: fit-content;
+      display: inline-block;
+    }
+    span {
+      font-size: 0.7rem;
+      font-weight: bold;
+    }
+  }
+  .head .container {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1 {
+      font-family: "Roboto Slab", serif;
+      font-size: 2rem;
+    }
+    p {
+      margin: 8px auto 30px auto;
+      font-size: 15px;
+      max-width: 400px;
+    }
+
+    form {
+      margin: auto;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      display: flex;
+      width: 95%;
+      max-width: 550px;
+      min-width: 300px;
+      input {
+        font-family: "Poppins";
+        padding: 20px 15px;
+        width: 100%;
+        border: none;
+        outline: none;
+      }
+      button {
+        font-family: "Poppins";
+        padding: 20px;
+        border: none;
+        outline: none;
+        background: #282932;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+          transition: background ease-in-out 0.2s;
+          background: #4a4a52;
+        }
+      }
+    }
+    @include mq(map-get($breakpoint, sm)) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      text-align: left;
+      @include mq(map-get($breakpoint, lg)) {
+        background: url("../images/food-illustration.jpg") 110% / 550px
+          no-repeat;
+      }
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        margin: 8px 0 30px 0;
+      }
+      form {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.result {
+  display: none;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .container .title {
+    font-size: 2.2rem;
+    font-family: "Roboto Slab", serif;
+    color: #282932;
+    margin-bottom: 20px;
+  }
+  .meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border-radius: 20px;
+      cursor: pointer;
+      background: #fff;
+      max-width: 360px;
+      margin: 20px 8px;
+      text-decoration: none;
+      color: #282932;
+      transition: box-shadow ease 0.5s;
+      &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+      }
+      .description {
+        padding: 10px 20px;
+        h1 {
+          font-size: 1.6rem;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.randomMeal {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  background: #f28ea6;
+  color: #fff;
+  padding: 30px 0;
+  .container {
+    .title {
+      font-size: 2.2rem;
+      font-family: "Roboto Slab", serif;
+      margin-bottom: 20px;
+    }
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+      }
+      ul {
+        color: #282932;
+        list-style: none;
+        margin: 30px 0;
+        max-width: 600px;
+        width: 100%;
+        li {
+          display: flex;
+          justify-content: space-between;
+          background: #fff;
+          padding: 8px;
+          margin-bottom: 2px;
+        }
+      }
+      img {
+        margin: 20px 0;
+        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
+      }
+    }
+    .howTo {
+      h1 {
+        width: 100%;
+        text-align: center;
+        margin: 50px 0;
+      }
+      iframe {
+        margin: 40px auto;
+        float: none;
+        width: 100%;
+        max-width: 600px;
+        max-height: 337.5px;
+        aspect-ratio: 16/9;
+        @include mq(map-get($breakpoint, sm)) {
+          float: right;
+          margin: 40px;
+          margin-right: 0;
+        }
+      }
+      p {
+        padding-top: 50px;
+        text-align: center;
+        line-height: 1.5;
+        @include mq(map-get($breakpoint, lg)) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 15px 0;
+  div {
+    font-size: 17px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+.block{
+  display: block;
+}
