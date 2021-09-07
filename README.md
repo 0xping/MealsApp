@@ -1,4 +1,4 @@
-![GIF of the Project]("./capture.gif")
+![GIF of the Project](https://github.com/AhmedAF13/MealsApp/blob/master/capture.gif)
 
 # 🍲 Meals Website
 > This is a very small project created with the purpose of learning the fundamentals of javascript .
@@ -16,4 +16,4 @@ a very basic project with vanilla Javascript created with the purpose of learnin
 
 Here you can find the demo link:
 
-- [Vercel](https://dd.cc)
+- [Vercel](https://meals-app-lilac.vercel.app/)
