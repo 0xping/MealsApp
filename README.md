@@ -1,4 +1,4 @@
-![GIF of the Project]("https://github.com/AhmedAF13/MealsApp/blob/master/capture.gif")
+![GIF of the Project](https://github.com/AhmedAF13/MealsApp/blob/master/capture.gif)
 
 # 🍲 Meals Website
 > This is a very small project created with the purpose of learning the fundamentals of javascript .
