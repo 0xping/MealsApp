@@ -16,4 +16,4 @@ a very basic project with vanilla Javascript created with the purpose of learnin
 
 Here you can find the demo link:
 
-- [Vercel](https://dd.cc)
+- [Vercel](https://meals-app-lilac.vercel.app/)
